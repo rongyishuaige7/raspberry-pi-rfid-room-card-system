@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Raspberry Pi RFID room-card system wiring boundary</title>
+  <desc id="desc">Source-derived connections for two RC522 readers, one SG90 servo, an optional OLED, LED, and buzzer. This is not a PCB schematic.</desc>
+  <style>
+    text{font-family:Inter,Arial,"Noto Sans SC",sans-serif;fill:#24292f}.h{font-size:30px;font-weight:700}.s{font-size:18px;fill:#57606a}.n{font-size:20px;font-weight:700}.p{font-size:16px}.box{fill:#fff;stroke:#8c959f;stroke-width:2;rx:16}.pi{fill:#fff7ed;stroke:#f97316;stroke-width:3}.spi{stroke:#0969da;stroke-width:4;fill:none}.power{stroke:#cf222e;stroke-width:4;fill:none}.ground{stroke:#57606a;stroke-width:4;fill:none}.signal{stroke:#1a7f37;stroke-width:4;fill:none}.warn{fill:#fff8c5;stroke:#d4a72c;stroke-width:2;rx:12}
+  </style>
+  <rect width="1200" height="760" fill="#f6f8fa"/>
+  <text x="50" y="58" class="h">RFID 房卡原型 · 接线边界</text>
+  <text x="50" y="88" class="s">来自当前公开源码，不是 PCB 原理图；当前提交尚未在历史实物上重新验收</text>
+  <rect x="455" y="155" width="300" height="420" class="box pi"/>
+  <text x="505" y="205" class="n">Raspberry Pi</text>
+  <text x="495" y="245" class="p">SPI0: GPIO8 / 9 / 10 / 11</text>
+  <text x="495" y="278" class="p">SPI1: GPIO16 / 19 / 20 / 21</text>
+  <text x="495" y="311" class="p">RST: GPIO25 / GPIO26</text>
+  <text x="495" y="344" class="p">Servo PWM: GPIO18</text>
+  <text x="495" y="377" class="p">LED: GPIO17</text>
+  <text x="495" y="410" class="p">Buzzer: GPIO27, active low</text>
+  <text x="495" y="443" class="p">OLED I2C: GPIO2 / GPIO3</text>
+  <text x="495" y="492" class="p">RC522 logic: 3.3 V</text>
+  <text x="495" y="525" class="p">All modules: common GND</text>
+  <rect x="55" y="155" width="305" height="165" class="box"/>
+  <text x="90" y="200" class="n">RC522 #1 · 前台</text>
+  <text x="90" y="235" class="p">SPI0 CE0 · /dev/spidev0.0</text>
+  <text x="90" y="268" class="p">RST GPIO25 · 3.3 V</text>
+  <path d="M360 235 H455" class="spi"/>
+  <rect x="55" y="405" width="305" height="165" class="box"/>
+  <text x="90" y="450" class="n">RC522 #2 · 房门</text>
+  <text x="90" y="485" class="p">SPI1 CE2 · /dev/spidev1.2</text>
+  <text x="90" y="518" class="p">RST GPIO26 · 3.3 V</text>
+  <path d="M360 485 H455" class="spi"/>
+  <rect x="845" y="145" width="300" height="135" class="box"/>
+  <text x="880" y="190" class="n">SG90 舵机</text>
+  <text x="880" y="225" class="p">GPIO18 PWM · 独立 5 V</text>
+  <path d="M755 250 H845" class="signal"/>
+  <rect x="845" y="330" width="300" height="115" class="box"/>
+  <text x="880" y="375" class="n">LED + 有源蜂鸣器</text>
+  <text x="880" y="410" class="p">GPIO17 / GPIO27</text>
+  <path d="M755 385 H845" class="signal"/>
+  <rect x="845" y="495" width="300" height="115" class="box"/>
+  <text x="880" y="540" class="n">SSD1306 OLED · 可选</text>
+  <text x="880" y="575" class="p">I2C1 · 地址 0x3C</text>
+  <path d="M755 535 H845" class="signal"/>
+  <rect x="55" y="640" width="1090" height="76" class="warn"/>
+  <text x="85" y="674" class="n">电气门禁</text>
+  <text x="245" y="674" class="p">RC522 只接 3.3 V；舵机用足够电流的 5 V 电源；确认蜂鸣器驱动与 LED 限流；全部共地。</text>
+  <line x1="70" y1="610" x2="1130" y2="610" class="ground"/>
+</svg>

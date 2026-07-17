@@ -1,0 +1,40 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Qt/qmake/C++ outputs
+client/.qmake.stash
+client/Makefile
+client/Makefile.*
+client/ui_*.h
+client/moc_*.cpp
+client/moc_predefs.h
+client/*.o
+client/card-manager
+build*/
+
+# Logs, exports, databases and packages
+*.log
+*_logs.csv
+*.db
+*.sqlite*
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+PyMySQL==1.1.2
+RPi.GPIO==0.7.1
+spidev==3.8
+mfrc522==0.0.7

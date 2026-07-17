@@ -1,0 +1,11 @@
+Designator,Item,Quantity,Source-confirmed specification,Needs physical confirmation,Notes
+HOST,Raspberry Pi,1,Raspberry Pi running Python and MariaDB,Exact model and RAM,Historical README says Raspberry Pi 4B
+RFID1,RC522 module,1,3.3 V MFRC522 module on SPI0,Module vendor and antenna,Front-desk reader
+RFID2,RC522 module,1,3.3 V MFRC522 module on SPI1 CE2,Module vendor and antenna,Door-side reader
+SERVO1,SG90-compatible servo,1,5 V PWM servo,Exact model and stall current,External 5 V supply recommended
+OLED1,SSD1306 OLED,0-1,I2C address 0x3C,Display size and voltage tolerance,Optional
+LED1,Indicator LED,0-1,GPIO17 active high,Series resistor value,Optional
+BUZZER1,Active buzzer module,0-1,GPIO27 active low,Driver transistor and current,Do not drive a high-current bare buzzer directly
+PSU1,Regulated power supply,1,5 V for Raspberry Pi and servo,Current rating and wiring,Servo transients must not reset the Pi
+CARD,13.56 MHz RFID card/tag,2+,UID used only as a prototype identifier,Card type and count,UID alone is cloneable
+WIRE,Jumpers/common ground,as needed,Common reference ground,Wire gauge and connectors,Keep 3.3 V and 5 V boundaries clear
