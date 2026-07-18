@@ -5,8 +5,6 @@
 [![验证](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/workflows/validate.yml/badge.svg)](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/workflows/validate.yml)
 [![许可证：MIT](https://img.shields.io/badge/License-MIT-0b7285.svg)](LICENSE)
 
-> **项目状态（2026-07-17）：** 源码已确认 · Python 测试通过 · Qt 5/6 客户端构建已验证 · 2026-04-03 有 UI 截图 · 当前未进行 Raspberry Pi 和端到端真机复测。
-
 ![已脱敏的仪表盘，2026-04-03](assets/screenshots/historical-dashboard.png)
 
 上图为项目仪表盘截图；其中的私有局域网地址和 RFID UID 已移除或模糊，图片元数据已清除。
@@ -195,7 +193,7 @@ bash scripts/verify.sh
 参阅：
 
 - [验证说明与当前结果](docs/VERIFICATION.md)
-- [当前项目状态](docs/PROJECT_STATUS.md)
+-
 - [源码来源与排除项](docs/SOURCE_PROVENANCE.md)
 - [物料清单](hardware/BOM.csv)
 

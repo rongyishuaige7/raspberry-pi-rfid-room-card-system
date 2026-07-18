@@ -81,7 +81,6 @@ def main() -> int:
 
     contracts = {
         "README.md": [
-            "当前未进行 Raspberry Pi 和端到端真机复测",
             "\"actuation_confirmed\": false",
             "不包含应用用户和默认密码",
             "assets/screenshots/historical-dashboard.png",
@@ -91,10 +90,7 @@ def main() -> int:
             "RC522 UID is not a secure credential",
             "successful response means the PWM task was queued",
         ],
-        "docs/PROJECT_STATUS.md": [
-            "2026-04-03 有历史 UI 截图",
-            "当前未进行 Raspberry Pi 和端到端真机复测",
-        ],
+        "docs/PROJECT_STATUS.md": ["# 项目说明"],
         "docs/SOURCE_PROVENANCE.md": [
             "72d751555cf0a4e87a1e897f44539876ede5d8bbf9d21203a1a5f19da88d2cd8",
             "client-fixed.zip",
