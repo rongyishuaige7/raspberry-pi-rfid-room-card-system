@@ -5,19 +5,19 @@ A teaching prototype that connects two RC522 readers, a Raspberry Pi Python serv
 [![Validate](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/workflows/validate.yml/badge.svg)](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0b7285.svg)](LICENSE)
 
-> **Evidence scope, 2026-07-17:** Source-confirmed · Python tests passed · Qt 5/6 client build-verified · Historical UI demonstrated on 2026-04-03 · Current Raspberry Pi and end-to-end hardware re-test not run.
+> **证据范围（2026-07-17）：** 源码已确认 · Python 测试通过 · Qt 5/6 客户端构建已验证 · 2026-04-03 有历史 UI 截图 · 当前未进行 Raspberry Pi 和端到端真机复测。
 
-![Redacted historical dashboard from 2026-04-03](assets/screenshots/historical-dashboard.png)
+![已脱敏的历史仪表盘，2026-04-03](assets/screenshots/historical-dashboard.png)
 
-The image above is a redacted derivative of a real historical interface capture. The private LAN address and RFID UIDs were removed or blurred, and image metadata was stripped. It demonstrates the historical UI only; it is not evidence that the current public commit was re-run on hardware.
+上图是一次真实历史界面采集的脱敏衍生文件：已移除或模糊私有局域网地址和 RFID UID，并清除图片元数据。它仅展示历史 UI，不证明当前公开提交已在硬件上重新运行。
 
-## Historical material evidence (2026-07-18 publication)
+## 历史素材证据（2026-07-18 发布）
 
-sanitized historical photo(s). See [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md) for dates, sanitization, omissions, and evidence limits.
+已脱敏的历史照片。日期、脱敏处理、未公开材料和证据边界见 [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md)。
 
-![Historical Raspberry Pi/RC522 prototype, 2026-04-08](assets/photos/historical-prototype.jpg)
+![历史树莓派/RC522 原型，2026-04-08](assets/photos/historical-prototype.jpg)
 
-Historical media/EDA do not prove that the current public commit was flashed or re-tested on hardware. **Current hardware re-test not run.**
+历史照片、截图或 EDA 不证明当前公开提交已烧录或完成真机复测。**当前未进行真机复测。**
 
 
 ## What the prototype covers
@@ -48,20 +48,20 @@ Raspberry Pi Python service ───── MariaDB
         └── SSD1306 / I2C1: optional local display
 ```
 
-## Historical interface evidence
+## 历史界面证据
 
 | Login | Room map |
 |:--:|:--:|
-| ![Historical login](assets/screenshots/historical-login.png) | ![Historical room map](assets/screenshots/historical-room-map.png) |
+| ![历史登录界面](assets/screenshots/historical-login.png) | ![历史房间地图](assets/screenshots/historical-room-map.png) |
 
 <details>
-<summary>Redacted historical audit-log view</summary>
+<summary>已脱敏的历史审计日志视图</summary>
 
-![Historical audit-log view with identifiers blurred](assets/screenshots/historical-audit-log.png)
+![已模糊标识符的历史审计日志视图](assets/screenshots/historical-audit-log.png)
 
 </details>
 
-These captures are dated 2026-04-03. They are kept separate from the current build claim.
+这些截图日期为 2026-04-03，并与当前构建结论严格分开。
 
 ## Repository layout
 
@@ -71,7 +71,7 @@ hardware/               Raspberry Pi server and hardware drivers
 database/init.sql       MariaDB schema and demo room seed data
 hardware/BOM.csv        Source-derived bill of materials
 hardware/wiring-diagram.svg
-assets/screenshots/     Redacted historical interface captures
+assets/screenshots/     已脱敏的历史界面截图
 tests/                  Hardware-free Python contract tests
 docs/                   Protocol, verification, state, and provenance
 scripts/                User creation and repository gates
@@ -169,11 +169,11 @@ make -j"$(nproc)"
 ./card-manager
 ```
 
-Qt 5 can use `qmake` with the corresponding development packages. Enter the actual Raspberry Pi address when prompted; no historical private IP is hard-coded.
+Qt 5 可配合相应开发包使用 `qmake`。提示时请输入实际 Raspberry Pi 地址；未硬编码任何历史私网 IP。
 
 ## Protocol and security semantics
 
-The client hashes the password once for historical protocol compatibility, then sends that digest over the custom TCP link. The server stores a salted PBKDF2 derivative, but a network observer could still replay the transmitted digest. See [PROTOCOL.md](docs/PROTOCOL.md) and [SECURITY.md](SECURITY.md).
+客户端为兼容历史协议，会将密码哈希一次后通过自定义 TCP 链路发送。服务端存储加盐 PBKDF2 衍生值，但网络观察者仍可能重放传输的摘要。见 [PROTOCOL.md](docs/PROTOCOL.md) 和 [SECURITY.md](SECURITY.md)。
 
 A remote-open response only confirms dispatch:
 
@@ -205,7 +205,7 @@ See:
 ## Known limits
 
 - Current commit has not been re-run on the retained Raspberry Pi/dual-RC522 prototype.
-- Historical interface screenshots are not current-commit evidence.
+- 历史 interface screenshots are not current-commit evidence.
 - CI does not access GPIO, SPI, MariaDB, RC522, SG90, OLED, LED, or buzzer hardware.
 - No TLS, replay protection, login rate limiting, lockout policy, tamper detection, or hardware-backed credential exists.
 - SG90 PWM timing is open-loop and does not prove a door reached a requested state.

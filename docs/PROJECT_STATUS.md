@@ -1,32 +1,31 @@
-# Project status
+# 项目状态
 
-> Status date: 2026-07-17
+> 状态日期：2026-07-17
 
-| Layer | Current evidence | Not established |
+| 层级 | 当前证据 | 尚未确认 |
 |:--|:--|:--|
-| Source | Source-confirmed; origin and exclusions are documented | No claim that the original dirty Git state was production-ready |
-| Python server | Static compile and unit tests pass | Not run against the historical Raspberry Pi GPIO/SPI stack in this publication pass |
-| Qt client | Qt 5 and Qt 6 clean qmake builds pass on Linux | No current Windows/macOS build or GUI smoke |
-| MariaDB | Schema is linted and database access has unit-tested password helpers | No current MariaDB integration run in CI |
-| Historical UI | Four redacted screenshots derive from real 2026-04-03 captures | Screenshots do not bind to the public commit |
-| Hardware | Wiring can be traced to current source | Current dual-RC522, SG90, buzzer, LED, and OLED re-test not run |
-| Security | Safer defaults and disclosed boundaries | No TLS, rate limiting, lockout, hardware-backed credential, or independent security assessment |
+| 源码 | 源码已确认；已记录来源和排除项 | 不声称原始 dirty Git 状态可用于生产 |
+| Python 服务端 | 静态编译和单元测试通过 | 此次公开发布未在历史 Raspberry Pi GPIO/SPI 栈上运行 |
+| Qt 客户端 | Qt 5 和 Qt 6 的干净 qmake Linux 构建通过 | 未进行当前 Windows/macOS 构建或 GUI 冒烟 |
+| MariaDB | Schema 已检查，数据库访问的密码辅助函数有单元测试 | CI 中未进行当前 MariaDB 集成运行 |
+| 历史 UI | 四张脱敏截图源自 2026-04-03 的真实采集 | 截图不绑定当前公开提交 |
+| 硬件 | 可根据当前源码追溯接线 | 当前未对双 RC522、SG90、蜂鸣器、LED 和 OLED 进行复测 |
+| 安全 | 采用更安全的默认值并披露边界 | 无 TLS、速率限制、锁定策略、硬件支持凭据或独立安全评估 |
 
-Canonical summary:
+规范摘要：
 
 ```text
-Source-confirmed
-Python tests passed
-Qt 5/6 client build-verified
-Historical UI demonstrated on 2026-04-03
-Current Raspberry Pi and end-to-end hardware re-test not run
+源码已确认
+Python 测试通过
+Qt 5/6 客户端构建已验证
+2026-04-03 有历史 UI 截图
+当前未进行 Raspberry Pi 和端到端真机复测
 ```
 
-Unsupported labels include production hotel access control, secure entry, tamper-proof,
-industrial-grade operation, and present-day hardware verification.
+不得使用“生产级酒店门禁”“安全出入”“防篡改”“工业级运行”和“当前已真机验证”等标签。
 
-## Historical media and EDA added on 2026-07-18
+## 2026-07-18 新增的历史素材与 EDA
 
-sanitized historical photo(s). See [MEDIA_EVIDENCE](MEDIA_EVIDENCE.md) for dates, sanitization, omissions, and evidence limits.
+已脱敏的历史照片。日期、脱敏处理、未公开材料和证据边界见 [MEDIA_EVIDENCE](MEDIA_EVIDENCE.md)。
 
-This publication update adds historical evidence only. Current hardware re-test not run.
+本次发布仅新增历史证据。当前未进行真机复测。
