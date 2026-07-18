@@ -5,19 +5,18 @@ A teaching prototype that connects two RC522 readers, a Raspberry Pi Python serv
 [![Validate](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/workflows/validate.yml/badge.svg)](https://github.com/rongyishuaige7/raspberry-pi-rfid-room-card-system/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0b7285.svg)](LICENSE)
 
-> **证据范围（2026-07-17）：** 源码已确认 · Python 测试通过 · Qt 5/6 客户端构建已验证 · 2026-04-03 有历史 UI 截图 · 当前未进行 Raspberry Pi 和端到端真机复测。
+> **项目状态（2026-07-17）：** 源码已确认 · Python 测试通过 · Qt 5/6 客户端构建已验证 · 2026-04-03 有UI 截图 · 当前未进行 Raspberry Pi 和端到端真机复测。
 
-![已脱敏的历史仪表盘，2026-04-03](assets/screenshots/historical-dashboard.png)
+![已脱敏的仪表盘，2026-04-03](assets/screenshots/historical-dashboard.png)
 
-上图是一次真实历史界面采集的脱敏衍生文件：已移除或模糊私有局域网地址和 RFID UID，并清除图片元数据。它仅展示历史 UI，不证明当前公开提交已在硬件上重新运行。
+上图为项目仪表盘截图；其中的私有局域网地址和 RFID UID 已移除或模糊，图片元数据已清除。
 
-## 历史素材证据（2026-07-18 发布）
+## 项目照片与资料
 
-已脱敏的历史照片。日期、脱敏处理、未公开材料和证据边界见 [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md)。
+这里整理了项目照片、界面截图和相关资料；文件处理说明见 [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md)。
 
-![历史树莓派/RC522 原型，2026-04-08](assets/photos/historical-prototype.jpg)
+![树莓派/RC522 原型，2026-04-08](assets/photos/historical-prototype.jpg)
 
-历史照片、截图或 EDA 不证明当前公开提交已烧录或完成真机复测。**当前未进行真机复测。**
 
 
 ## What the prototype covers
@@ -52,12 +51,12 @@ Raspberry Pi Python service ───── MariaDB
 
 | Login | Room map |
 |:--:|:--:|
-| ![历史登录界面](assets/screenshots/historical-login.png) | ![历史房间地图](assets/screenshots/historical-room-map.png) |
+| ![登录界面](assets/screenshots/historical-login.png) | ![房间地图](assets/screenshots/historical-room-map.png) |
 
 <details>
 <summary>已脱敏的历史审计日志视图</summary>
 
-![已模糊标识符的历史审计日志视图](assets/screenshots/historical-audit-log.png)
+![已模糊标识符的审计日志视图](assets/screenshots/historical-audit-log.png)
 
 </details>
 
@@ -205,7 +204,7 @@ See:
 ## Known limits
 
 - Current commit has not been re-run on the retained Raspberry Pi/dual-RC522 prototype.
-- 历史 interface screenshots are not current-commit evidence.
+- interface screenshots are not current-commit evidence.
 - CI does not access GPIO, SPI, MariaDB, RC522, SG90, OLED, LED, or buzzer hardware.
 - No TLS, replay protection, login rate limiting, lockout policy, tamper detection, or hardware-backed credential exists.
 - SG90 PWM timing is open-loop and does not prove a door reached a requested state.
