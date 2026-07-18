@@ -11,6 +11,15 @@ A teaching prototype that connects two RC522 readers, a Raspberry Pi Python serv
 
 The image above is a redacted derivative of a real historical interface capture. The private LAN address and RFID UIDs were removed or blurred, and image metadata was stripped. It demonstrates the historical UI only; it is not evidence that the current public commit was re-run on hardware.
 
+## Historical material evidence (2026-07-18 publication)
+
+sanitized historical photo(s). See [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md) for dates, sanitization, omissions, and evidence limits.
+
+![Historical Raspberry Pi/RC522 prototype, 2026-04-08](assets/photos/historical-prototype.jpg)
+
+Historical media/EDA do not prove that the current public commit was flashed or re-tested on hardware. **Current hardware re-test not run.**
+
+
 ## What the prototype covers
 
 - separate SPI0 front-desk and SPI1 CE2 door-side RC522 readers;
