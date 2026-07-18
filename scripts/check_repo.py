@@ -82,8 +82,8 @@ def main() -> int:
     contracts = {
         "README.md": [
             "当前未进行 Raspberry Pi 和端到端真机复测",
-            "actuation_confirmed\": false",
-            "no application user and no default password",
+            "\"actuation_confirmed\": false",
+            "不包含应用用户和默认密码",
             "assets/screenshots/historical-dashboard.png",
         ],
         "SECURITY.md": [
