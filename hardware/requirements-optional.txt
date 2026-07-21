@@ -1,2 +1,2 @@
 luma.oled==3.15.0
-Pillow==11.3.0
+Pillow==12.3.0
